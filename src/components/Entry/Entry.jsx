@@ -8,7 +8,6 @@ const Entry = () => {
           </label>
           <div className="entry__buttons">
               <button>Add</button>
-              <button>Delete</button>
           </div>
         </div>
     )
