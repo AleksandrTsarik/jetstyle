@@ -1,16 +1,19 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import './style/main.sass'
-import Books from './components/Books/Books';
 import Entry from './components/Entry/Entry';
+import ListBooks from './components/ListBooks/ListBooks';
 
-const App = () => {
+const App = (props) => {
+
   return (
     <div className="app-wrapper">
       <div className="inner">
-        <Books />
-        <Entry />
+        <ListBooks 
+          booksData={props.booksData}
+          delBook={props.delBook} 
+         />
+        <Entry addBook={props.addBook} />
       </div>
     </div>
   );
