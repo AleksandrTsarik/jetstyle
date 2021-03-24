@@ -1,17 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import booksData, { addBook, delBook } from './localStorage';
+import booksData from './localStorage';
+import { rerenderEntireTree } from './render'
 
-addBook('asdasdasdsadsa')
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App  booksData={booksData} addBook={addBook} delBook={delBook} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+rerenderEntireTree(booksData);
 
 reportWebVitals();

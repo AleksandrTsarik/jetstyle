@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "./render";
+
 
 let booksData = [
     {id: 1, name: 'Я, робот', author: 'Айзек Азимов'},
@@ -12,7 +14,7 @@ export let addBook = (booksName, booksAuthor) => {
         author: booksAuthor
     };
     booksData.push(newBook);  
-
+    rerenderEntireTree(booksData); 
     };
 
 export let delBook = (id) => {
